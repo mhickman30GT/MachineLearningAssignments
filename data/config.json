@@ -1,0 +1,173 @@
+{
+    "churn": {
+        "file": "churn_modelling_mod.csv",
+        "label": "Exited",
+        "params": {
+            "DT": {
+                "class_weight": {
+                    "value": ["balanced"]
+                },
+                "criterion": {
+                    "value": ["entropy"]
+                },
+                "max_depth": {
+                    "value": [7]
+                },
+                "max_leaf_nodes": {
+                    "value": [46]
+                },
+                "splitter": {
+                    "value": ["best"]
+                }
+            },
+            "NN": {
+                "alpha": {
+                    "value": [0.0001]
+                },
+                "batch_size": {
+                    "value":  [25]
+                },
+                "hidden_layer_sizes": {
+                    "value": [[7,7]]
+                },
+                "learning_rate": {
+                    "value":  ["adaptive"]
+                },
+                "max_iter": {
+                    "value":  [100]
+                },
+                "learning_rate_init": {
+                    "value":  [0.001]
+                }},
+            "BOOST": {
+                "algorithm": {
+                    "value": ["SAMME"]
+                },
+                "max_depth": {
+                    "value": [3]
+                },
+                "learning_rate": {
+                    "value": [0.29]
+                },
+                "n_estimators": {
+                    "value": [44]
+                }
+            },
+            "SVM": {
+                "C": {
+                    "value": [2.5]
+                },
+                "kernel": {
+                    "value": ["poly"]
+                },
+                "tol": {
+                    "value": [1e-1]
+                },
+                "gamma": {
+                    "value": ["scale"]
+                },
+                "degree": {
+                    "value": ["3"]
+                },
+                "coef0": {
+                    "value": ["0.2"]
+                }
+            },
+            "KNN": {
+                "metric": {
+                    "value": ["euclidean"]
+                },
+                "n_neighbors": {
+                    "value": [23]
+                },
+                "weights": {"value": ["distance"]}
+            }
+        }
+    },
+    "student": {
+        "file": "student.csv",
+        "label": "Grade",
+        "params": {
+            "DT": {
+                "class_weight": {
+                    "value": ["balanced"]
+                },
+                "criterion": {
+                    "value": ["entropy"]
+                },
+                "max_depth": {
+                    "value": [7]
+                },
+                "max_leaf_nodes": {
+                    "value": [16]
+                },
+                "splitter": {
+                    "value": ["best"]
+                }
+            },
+            "NN": {
+                "alpha": {
+                    "value": [0.00025]
+                },
+                "batch_size": {
+                    "value":  [20]
+                },
+                "hidden_layer_sizes": {
+                    "value": [[7, 7]]
+                },
+                "learning_rate": {
+                    "value":  ["adaptive"]
+                },
+                "max_iter": {
+                    "value":  [200]
+                }
+            },
+            "BOOST": {
+                "algorithm": {
+                    "value": ["SAMME"]
+                },
+                "max_depth": {
+                    "value": [4]
+                },
+                "learning_rate": {
+                    "value": [0.2]
+                },
+                "n_estimators": {
+                    "value": [20]
+                }
+            },
+            "SVM": {
+                "C": {
+                    "value": [0.2]
+                },
+                "kernel": {
+                    "value": ["linear"]
+                },
+                "tol": {
+                    "value": [1e-2]
+                },
+                "gamma": {
+                    "value": ["scale"]
+                },
+                "decision_function_shape": {
+                    "value": ["ovo"]
+                },
+                "degree": {
+                    "value": [3]
+                },
+                "coef0": {
+                    "value": [2.5]
+                }
+            },
+            "KNN": {
+                "metric": {
+                    "value": ["euclidean"]
+                },
+                "n_neighbors": {
+                    "value": [15]
+                },
+                "weights": {"value": ["distance"]}
+            }
+        }
+    }
+}
